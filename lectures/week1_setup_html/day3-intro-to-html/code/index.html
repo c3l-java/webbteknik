@@ -24,6 +24,7 @@
 				&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
 			</code>
 		</div>
+<<<<<<< HEAD
 		<div class="subsection">
 			<h3>html5 doctype</h3>
 			<p>The html5 doctype allows code to be written far more loosely.</p>
@@ -91,6 +92,112 @@
 				&nbsp;&nbsp;&nbsp;The cat sat on the mat.<br/>
 				&lt;/p&gt;
 			</code>
+=======
+		<div class="section">
+			<h2>
+				Block elements
+			</h2>
+			<p>
+				Block elements provide the main structure of the page. They consume the entire width available to them.
+			</p>
+			<div class="subsection">
+				<h3>Headings</h3>
+				<p>We represent headings with the <code>&lt;h1&gt;</code> element. The number represents the headings importance. 1 is the most important and 6 the least.</p>
+				<table>
+					<tbody>
+						<tr>
+							<th>Code</th>
+							<th>Visualisation</th>
+						</tr>
+						<tr>
+							<td><code>&lt;h1&gt;Header 1&lt;/h1&gt;</code></td>
+							<td><h1>Header 1</h1></td>
+						</tr>
+						<tr>
+							<td><code>&lt;h2&gt;Header 2&lt;/h2&gt;</code></td>
+							<td><h2>Header 2</h2></td>
+						</tr>
+						<tr>
+							<td><code>&lt;h3&gt;Header 3&lt;/h3&gt;</code></td>
+							<td><h3>Header 3</h3></td>
+						</tr>
+						<tr>
+							<td><code>&lt;h4&gt;Header 4&lt;/h4&gt;</code></td>
+							<td><h4>Header 4</h4></td>
+						</tr>
+						<tr>
+							<td><code>&lt;h5&gt;Header 5&lt;/h5&gt;</code></td>
+							<td><h5>Header 5</h5></td>
+						</tr>
+						<tr>
+							<td><code>&lt;h6&gt;Header 6&lt;/h6&gt;</code></td>
+							<td><h6>Header 6</h6></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="subsection">
+				<h3>Divisions</h3>
+				<p>The div element is used for parts of the document that can't be semantically described by other html block elements. It is usually used in combination with a class or id attribute.</p>
+				<code>
+					&lt;div class="article"&gt;<br/>
+					&nbsp;&nbsp;&nbsp;Some very exciting news. <br/>
+					&lt;/div&gt;
+				</code>
+			</div>
+			<div class="subsection">
+				<h3>Paragraphs</h3>
+				<p>The paragraph element encloses paragraphs.</p>
+				<code>
+					&lt;p&gt;<br/>
+						&nbsp;&nbsp;&nbsp;The cat sat on the mat.<br/>
+					&lt;/p&gt;
+				</code>
+			</div>
+			<div class="subsection">
+				<h3>Tables</h3>
+				<p>A table in html contains 1 or more rows and 1 or more columns. In xhtml the rows should be inside a tbody element. Traditionally tables were used for formatting the page. They should not be used in this way. Tables should only be used where you want to represent tabular data.</p>
+				<table>
+					<tbody>
+						<tr>
+							<th>Code</th>
+							<th>Visualization</th>
+						</tr>
+						<tr>
+							<td>
+								&lt;table&gt;<br/>
+								&nbsp;&nbsp;&lt;tbody&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Head col1&lt;/th&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Head col2&lt;/th&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;row2 col1&lt;/td&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;row2 col2&lt;/td&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;	<br/>
+								&nbsp;&nbsp;&lt;/tbody&gt;<br/>
+								&lt;/table&gt; 
+							</td>
+							<td>
+								<table>
+									<tbody>
+										<tr>
+											<th>Head col1</th>
+											<th>Head col2</th>
+										</tr>
+										<tr>
+											<td>row2 col1</td>
+											<td>row2 col2</td>
+										</tr>	
+									</tbody>
+								</table>
+							</td>
+						</tr>	
+					</tbody>
+				</table>
+			</div>
+
+>>>>>>> e7ef9d65542f0f4b9485b2910eade1c2a3d93d1f
 		</div>
 		<div class="subsection">
 			<h3>Tables</h3>
