@@ -8,7 +8,7 @@
 	</title>
 </head>
 <body>
-	<div class="section">
+	<div class="section" id="doctype">
 		<h2>Doctypes</h2>
 		<p>
 			Doctypes appear at the very top of the page. They tell the browser how the html on your page should be interpreted.
@@ -33,7 +33,7 @@
 			</code>
 		</div>
 	</div>
-	<div class="section">
+	<div class="section" id="block">
 		<h2>Block elements</h2>
 		<p>
 			Block elements provide the main structure of the page. They consume the entire width available to them.
@@ -154,8 +154,8 @@
 						<td>
 							<strong>Ordered list</strong><br/>
 							&lt;ol&gt;<br/>
-								&lt;li&gt;Saab&lt;/li&gt;<br/>
-								&lt;li&gt;Ford&lt;/li&gt;<br/>
+							&lt;li&gt;Saab&lt;/li&gt;<br/>
+							&lt;li&gt;Ford&lt;/li&gt;<br/>
 							&lt;/ol&gt;<br/>
 						</td>
 						<td>
@@ -169,8 +169,8 @@
 						<td>
 							<strong>Unordered list</strong><br/>
 							&lt;ul&gt;<br/>
-								&lt;li&gt;Saab&lt;/li&gt;<br/>
-								&lt;li&gt;Ford&lt;/li&gt;<br/>
+							&lt;li&gt;Saab&lt;/li&gt;<br/>
+							&lt;li&gt;Ford&lt;/li&gt;<br/>
 							&lt;/ul&gt;<br/>
 						</td>
 						<td>
@@ -180,12 +180,91 @@
 							</ul>
 						</td>
 					</tr>
+					<tr>
+						<td></td>
+						<td>
+							<dl>
+								<dt>
+									Car
+								</dt>
+								<dd>
+									4 wheel transportation device	
+								</dd>
+								<dt>
+									Cycle
+								</dt>
+								<dd>
+									2 wheel transportation device
+								</dd>
+							</dl>
+						</td>
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
+		<div class="subsection">
+			<h3>Horizontal rule</h3>
+			<p>
+				A horizontal break between two sections
+			</p>
+			<table>
+				<tbody>
+					<tr>
+						<th>Code</th>
+						<th>Visualization</th>
+					</tr>
+					<tr>
+						<td> &lt;hr/&gt;</td>
+						<td> <hr/> </td>
+					</tr>
 				</tbody>
 			</table>
 		</div>
 	</div>
 	<div class="section">
 		<h2>Inline elements</h2>
+		<p>
+			An inline element does not break the flow of the page.
+		</p>
+		<div class="subsection">
+			<h3>Anchor (Link)</h3>
+			<p>
+				The anchor element is used for linking to other resources. The resource could be within your page or on another page.
+			</p>
+			<p>
+				<a href="#block">To the block section.</a> The next link takes us to
+				google <a href="http://www.google.se">click me</a>.
+			</p>
+		</div>
+		<div class="subsection">
+			<h3>Images</h3>
+			<p>
+				Images can be included in your page with this tag <code></code>
+				<img src="img/tortoise.jpg" alt="Picture of tortoise"/>
+				<img src="http://24.media.tumblr.com/b36b219d66c702924000dfe5bb095938/tumblr_mocjhwNOjY1qakea9o1_500.jpg"
+				alt="Picture of a hamster"/>
+			</p>
+		</div>
+		<div class="subsection">
+			<h3>Span</h3>
+			<p>The span element is the inline equivalent of a div. It can be used to markup elements that can not be described by any other element. </p>
+			<p> Example: I read <span class="book">the art of computer programming</span>
+			</p>
+		</div>
+		<div class="subsection">
+			<h3>Strong</h3>
+			<p>
+				The strong element is used for lifting out text that is <strong>important</strong>.
+			</p>
+		</div>
+		<div class="subsection">
+			<h3>Emphasis</h3>
+			<p>
+				The emphasis element is used for lifting out text that is <em>important</em> but not
+				as important as <strong>strong</strong> text.
+			</p>
+		</div>
 	</div>
 </body>
 </html>
