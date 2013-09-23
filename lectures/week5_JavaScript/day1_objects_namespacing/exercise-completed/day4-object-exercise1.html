@@ -35,14 +35,30 @@
 	// 3) Create an array with multiple floggit objects in it.
 	var blocketItems = [], i;
 	blocketItems.push(blocketItemFactory("kittens", "Animals", ["img1.jpg","img2.jpg"],"pretty cats",500,"73994"));
-	blocketItems.push(blocketItemFactory("Wheels", "Car parts"));
-	blocketItems.push(blocketItemFactory("kittens 2", "Animals"));
-	blocketItems.push(blocketItemFactory("kittens 3", "Animals"));
+	blocketItems.push(blocketItemFactory("Wheels", "Car parts",[],"",100));
+	blocketItems.push(blocketItemFactory("Pram", "Baby items",[], "",900));
+	blocketItems.push(blocketItemFactory("Horse", "Animals",[],"",700));
 
 	// 4)  Your boss wants to see if your structure is going to work for the list all objects. Create a loop 
 	// that loops through all your objects and console.logs just the titles.
 	for(i = 0; i < blocketItems.length; i = i + 1){
-		console.log(blocketItems[i].title);
+		console.log(blocketItems[i].title + " " + blocketItems[i].price);
 	}
+	console.log("-------------------------------------------");
 	// 5) Advanced can you sort your array by the object price and rerun the loop you created in step 4?	
+	blocketItems.sort(function compare(a, b) {
+	  if (a.price > b.price){
+	  	return -1;
+	  }
+	     
+	  if (a.price < b.price){
+	  	return 1;
+	  }
+	     
+	  // a must be equal to b
+	  return 0;
+	});
+	for(i = 0; i < blocketItems.length; i = i + 1){
+		console.log(blocketItems[i].title + " " + blocketItems[i].price);
+	}
 </script>
