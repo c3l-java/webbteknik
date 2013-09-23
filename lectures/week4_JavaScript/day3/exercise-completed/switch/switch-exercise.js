@@ -17,7 +17,7 @@ var cats = [{
     type: "Lion"
 }, {
     name: "Alex",
-    type: "Lion"
+    type: "lion"
 }],
     i;
 // Loop through the cats. Use a switch statement, depending on cat type perform the following.
