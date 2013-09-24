@@ -1,7 +1,6 @@
 /*jslint browser:true */
-/*global js:false, alert: false, confirm: false, console: false, Debug: false, opera: false, prompt: false, WSH: false */
-triv.data = {};
-triv.data.questions = [{
+/*global triv: false, wui: false, settingsFile: false, OpenLayers: false, alert: false, confirm: false, console: false, Debug: false, opera: false, prompt: false, WSH: false */
+triv.questions = [{
     q: "What is the capital of Sweden? \n 1: Stockholm \n 2: London \n 3. Helsinkini",
     a: 1
 }, {
