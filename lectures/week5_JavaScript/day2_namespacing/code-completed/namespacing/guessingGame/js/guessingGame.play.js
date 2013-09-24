@@ -7,7 +7,7 @@ guessingGame.play = function () {
 	guess = guessingGame.ui.askForGreeting();
 	// Get a random greeting
 	answer = guessingGame.logic.getGreeting();
-	// See if the gues is the same as the answer
+	// See if the guess is the same as the answer
 	correct = (guess.toUpperCase() === answer.toUpperCase());
 	// Show the user how it went
 	guessingGame.ui.showResult(correct, guess, answer);
