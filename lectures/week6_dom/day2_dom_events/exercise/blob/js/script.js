@@ -5,4 +5,8 @@ window.addEventListener("DOMContentLoaded", function () {
     var blob = document.querySelector("#blob");
     blob.style.top = "0px";
     blob.style.left = "0px";
+    console.dir(blob);
+    window.addEventListener("click", function () {
+        alert("event triggered");
+    });
 });
