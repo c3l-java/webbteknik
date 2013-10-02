@@ -6,13 +6,12 @@ window.addEventListener("DOMContentLoaded", function () {
     var button = document.simpleForm.myButton,
         textBox = document.simpleForm.myTextBox,
         textArea = document.simpleForm.myTextArea,
-        /* I cheated and used a CSS selector :)*/
-        sex = document.querySelector("input[name='sex']:checked"),
         bike = document.simpleForm.bike,
         car = document.simpleForm.car,
         carBrand = document.simpleForm.carBrand;
     button.addEventListener("click", function () {
-        var bigString;
+        var bigString,
+            sex = document.querySelector("input[name='sex']:checked"); /* I cheated and used a CSS selector :)*/
         bigString = "TextBox : " + textBox.value + "\n";
         bigString += "TextArea : " + textArea.value + "\n";
         bigString += "Sex : " + sex.value + "\n";

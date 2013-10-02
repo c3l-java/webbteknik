@@ -10,10 +10,10 @@ window.addEventListener("DOMContentLoaded", function () {
     'use strict';
     var i, setClick, li,
         ul = document.querySelector("ul");
-    setClick = function (li, i) {
+    setClick = function (li, index) {
         li.addEventListener("click", function () {
-            alert(" You clicked on : " + i);
-        }, false);
+            alert(" You clicked on : " + index);
+        });
     };
     for (i = 0; i < 15; i = i + 1) {
         li = document.createElement("li");
@@ -21,4 +21,4 @@ window.addEventListener("DOMContentLoaded", function () {
         setClick(li, i);
         ul.appendChild(li);
     }
-}, false);
+});
