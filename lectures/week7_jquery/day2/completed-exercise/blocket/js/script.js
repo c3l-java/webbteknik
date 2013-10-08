@@ -1,14 +1,17 @@
 /*jslint browser:true */
 /*global $: false, alert: false, confirm: false, console: false, Debug: false, opera: false, prompt: false, WSH: false */
-var names = [],
-    prices = [],
-    totalPrice = 0;
+var cats = [],
+    totalPrice = 0,
+    priceArray = [];
 $(function () {
     "use strict";
+    console.clear();
     $(".item_link").each(function () {
-        names.push($(this).text());
+        cats.push($(this).text());
     });
     $(".list_price").each(function () {
-        totalPrice = totalPrice + Number($(this).text().trim().replace(":-", "").replace(/\s/g, ""));
+        var num = Number($(this).text().trim().replace(":-", "").replace(/\s/g, ''));
+        priceArray.push(num);
+        totalPrice = totalPrice + num;
     });
 });
