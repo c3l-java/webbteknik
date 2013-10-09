@@ -36,7 +36,7 @@ writeQuestion = function () {
     // use jquery to set it's contents to be the same as the number of the currentQuestionIndex
     // Your step 3 code here
     // STEP 4
-    // We have a main div with an id of questionsText
+    // We have a main div with an id of questionText
     // Populate it with the html key for the current question using currentQuestionIndex to get the correct question from the array
     // Your step 4 code here
     // STEP 5

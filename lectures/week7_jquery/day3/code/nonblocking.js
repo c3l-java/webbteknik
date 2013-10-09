@@ -16,5 +16,5 @@ setTimeout(writeToConsole, 2000);
 //Blocking code
 console.log("starting loop");
 for (var i = 0; i < 5000000000; i = i + 1) {};
-console.log("finished loop");
+console.log("finished loop"); * /
 console.log("end");
