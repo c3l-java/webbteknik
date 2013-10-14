@@ -5,23 +5,23 @@
 // Your step 1 code here
 var checkAnswer, writeQuestion, correctAnswer,
     questions = [{
-        html: "What is the longest river in the world is called?",
+        question: "What is the longest river in the world is called?",
         answers: ["Nile", "Amazon", "Thames"],
         correctAnswer: "Nile"
     }, {
-        html: "What is the highest mountain in the world called?",
+        question: "What is the highest mountain in the world called?",
         answers: ["Everest", "Mount Blanc", "Snowden"],
         correctAnswer: "Everest"
     }, {
-        html: "The longest road in the world is approximately how long?",
+        question: "The longest road in the world is approximately how long?",
         answers: ["20000km", "2000km", "8000km"],
         correctAnswer: "8000km"
     }, {
-        html: "Which country grows the most coffee",
+        question: "Which country grows the most coffee",
         answers: ["Sweden", "Brazil", "France"],
         correctAnswer: "Brazil"
     }, {
-        html: "Which sea or ocean does the river Jordan run into?",
+        question: "Which sea or ocean does the river Jordan run into?",
         answers: ["Pacific", "Atlantic", "Dead Sea"],
         correctAnswer: "Atlantic"
     }],
@@ -37,7 +37,7 @@ writeQuestion = function () {
     // Your step 3 code here
     // STEP 4
     // We have a main div with an id of questionText
-    // Populate it with the html key for the current question using currentQuestionIndex to get the correct question from the array
+    // Populate it with the question property for the current question using currentQuestionIndex to get the correct question from the array
     // Your step 4 code here
     // STEP 5
     // Use jQuery to set the text of buttons A, B and C to be the value of the three different answers in
