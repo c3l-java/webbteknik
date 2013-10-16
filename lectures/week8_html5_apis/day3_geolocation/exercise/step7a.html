@@ -4,23 +4,24 @@
         <title>My first geolocation iPhone and Android web app</title>
     </head>
     <body>
+        <div></div>
         <script type="text/javascript">
+            var div = document.querySelector("div");
             var usePosition = function(position) {
-                document.write('Recieved coordinates from your device:<br>');
-                document.write('latitude: ' + position.coords.latitude +'<br/>');
-                document.write('longitude: ' + position.coords.longitude +'<br/>');
-                document.write('accuracy: ' + position.coords.accuracy +'<br/>');
-                document.write('altitude: ' + position.coords.altitude +'<br/>');
-                document.write('altitudeAccuracy: ' + position.coords.altitudeAccuracy +'<br/>');
-                document.write('heading: ' + position.coords.heading +'<br/>');
-                document.write('speed: ' + position.coords.speed +'<br/>');
+                div.innerHTML += 'Recieved coordinates from your device:<br>';
+                div.innerHTML += 'latitude: ' + position.coords.latitude +'<br/>';
+                div.innerHTML += 'longitude: ' + position.coords.longitude +'<br/>';
+                div.innerHTML += 'accuracy: ' + position.coords.accuracy +'<br/>';
+                div.innerHTML += 'altitude: ' + position.coords.altitude +'<br/>';
+                div.innerHTML += 'altitudeAccuracy: ' + position.coords.altitudeAccuracy +'<br/>';
+                div.innerHTML += 'heading: ' + position.coords.heading +'<br/>';
+                div.innerHTML += 'speed: ' + position.coords.speed +'<br/>';
             };
 
             var positionError = function(error) {
                 var ERROR_CODES = ['', 'Permission denied', 'Position unavailable', 'Timeout'];
-                document.write('Error ' + ERROR_CODES[error.code] + '<br/>'+ error.message);
+                div.innerHTML += 'Error ' + ERROR_CODES[error.code] + '<br/>'+ error.message;
             };
-   navigator.geolocation.getCurrentPosition(usePosition, positionError, {enableHighAccuracy:true});
         </script>
     </body>
 </html>
