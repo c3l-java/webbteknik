@@ -50,6 +50,7 @@
                 
                 
                 localResultsPanel.show = function() {
+                    var lat, lng;
                     localResultsPanel.getDomElement().style.display = "-webkit-box";
                     localResultsPanel.wikiListPanel.mainContent.setText("Loading...");
                     /*
@@ -60,7 +61,13 @@
                      * 
                      */
                    
-                    localResultsPanel.geoload(51.500688,-0.124411, 10);
+                    
+                    navigator.geolocation.getCurrentPosition(function(position){
+                        lat = position.coords.latitude;
+                        lng = position.coords.longitude;
+                         localResultsPanel.geoload(lat, lng, 10);
+                    });
+
                 };
 
 				var testPanel = compositePanel();
