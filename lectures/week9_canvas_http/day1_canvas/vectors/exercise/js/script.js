@@ -8,17 +8,23 @@ document.addEventListener("DOMContentLoaded", function () {
     // Create a variable called drawing set it to false
     canvas.width = 500;
     canvas.height = 500;
-    ctx.beginPath();
-    ctx.moveTo(10, 20);
-    ctx.lineTo(40, 50);
+    ctx.moveTo(100, 100);
+    ctx.lineTo(20, 150);
+    ctx.lineTo(20, 400);
+    ctx.lineTo(480, 400);
+    ctx.lineTo(480, 150);
+    ctx.lineTo(400, 100);
+    ctx.lineTo(100, 100);
     // Step 1 continue drawing
     // Can you draw a house?
     ctx.stroke();
     canvas.addEventListener("mousedown", function (e) {
         console.log("mousedown", e.offsetX, e.offsetY);
         // Step 3
+        // 
         // a) using the moveTo function move the pen to where the user clicked
         // b) set the variable drawing to true
+        // c) start a new path with ctx.beginPath function
     }, false);
     canvas.addEventListener("mousemove", function (e) {
         console.log("mousemove", e.offsetX, e.offsetY);
