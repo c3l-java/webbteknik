@@ -18,30 +18,28 @@ var createAnimal = function () {
     function animate() {
         var yPosition = 0,
             tempFrame;
-        if (loaded) {
-            switch (direction) {
-            case "n":
-                yPosition = -96;
-                break;
-            case "s":
-                yPosition = 0;
-                break;
-            case "e":
-                yPosition = -64;
-                break;
-            case "w":
-                yPosition = -32;
-                break;
-            }
-            context.clearRect(0, 0, canvas.width, canvas.height);
-            if (animationFrame === 3) {
-                animationFrame = 0;
-            } else {
-                animationFrame = animationFrame + 1;
-            }
-            tempFrame = (animationFrame === 3) ? 1 : animationFrame;
-            context.drawImage(spriteImage, tempFrame * -32, yPosition);
+        switch (direction) {
+        case "n":
+            yPosition = -96;
+            break;
+        case "s":
+            yPosition = 0;
+            break;
+        case "e":
+            yPosition = -64;
+            break;
+        case "w":
+            yPosition = -32;
+            break;
         }
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        if (animationFrame === 3) {
+            animationFrame = 0;
+        } else {
+            animationFrame = animationFrame + 1;
+        }
+        tempFrame = (animationFrame === 3) ? 1 : animationFrame;
+        context.drawImage(spriteImage, tempFrame * -32, yPosition);
         setTimeout(animate, 100);
     }
     animate();

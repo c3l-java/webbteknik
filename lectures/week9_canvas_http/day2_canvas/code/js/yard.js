@@ -23,18 +23,26 @@ document.addEventListener("DOMContentLoaded", function () {
     function moveDog() {
         switch (myDog.getDirection()) {
         case "n":
-            myDog.y = myDog.y - 1;
+            if (myDog.y > 0) {
+                myDog.y = myDog.y - 1;
+            }
             break;
         case "s":
-            myDog.y = myDog.y + 1;
+            if (myDog.y < canvas.height - myDog.canvas.height) {
+                myDog.y = myDog.y + 1;
+            }
             break;
         case "e":
-            myDog.x = myDog.x + 1;
+            if (myDog.x < canvas.width - myDog.canvas.width) {
+                myDog.x = myDog.x + 1;
+            }
             break;
         case "w":
-            myDog.x = myDog.x - 1;
+            if (myDog.x > 0) {
+                myDog.x = myDog.x - 1;
+            }
             break;
         }
     }
-    setInterval(moveDog, 10);
+    var myInterval = setInterval(moveDog, 10);
 });
