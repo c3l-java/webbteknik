@@ -15,7 +15,7 @@ In this exercise you will create a new node module that will add stuff togethor.
 
 6) Create a variable called currentNumber with a value of 10.
 
-7) Create a function called addder that takes a single parameter. The function should add the number given to it to currentNumber and return the result.
+7) Create a function called adder that takes a single parameter. The function should add the number given to it to currentNumber and return the result.
 
 8) Use module.exports to expose the function.
 
