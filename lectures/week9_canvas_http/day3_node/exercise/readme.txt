@@ -39,7 +39,8 @@ If you get the correct result continue. Now we will do a proper unit test using 
 
 5) Create a folder in your addStuff folder with the name node_modules.
 
-6) In terminal make sure you are in the addStuff folder and then install the unit testing framework nodeunit, to do this we type 'npm install nodeunit'
+6) In terminal make sure you are in the addStuff folder and then install the unit testing framework nodeunit, to do this we type 'sudo npm install -g nodeunit'
+'npm install nodeunit'
 
 7) Have a look at the documentation for nodeunit on github, we will be using it to write what we call a unit test. A unit test is a piece of code that tests that another piece of code is working properly.
 
