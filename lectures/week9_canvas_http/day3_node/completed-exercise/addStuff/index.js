@@ -3,7 +3,7 @@ var currentNumber = 10;
 
 function adder(num) {
     "use strict";
-    currentNumber += num;
+    currentNumber = currentNumber + num;
     return currentNumber;
 }
 module.exports = {
