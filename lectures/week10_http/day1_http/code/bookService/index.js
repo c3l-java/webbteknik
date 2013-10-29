@@ -14,7 +14,7 @@ var express = require("express"),
             author: "Tom Blackmore"
         }
     };
-app.use(require('connect').bodyParser());
+app.use(express.json());
 app.get("/" + versionNumber + "/books", function (req, res) {
     "use strict";
     res.json(books);
