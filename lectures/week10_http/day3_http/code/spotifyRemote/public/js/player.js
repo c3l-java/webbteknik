@@ -26,6 +26,9 @@ $(function () {
                 $(".play").show();
                 $(".pause").hide();
             }
+            spotify.getArtwork(function (url) {
+                $("img").attr("src", url);
+            });
         });
-    }, 500);
+    }, 1000);
 });

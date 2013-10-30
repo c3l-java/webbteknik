@@ -60,8 +60,7 @@ spotify.loadTrack = function (text, callback) {
                 url: "/loadTrack",
                 type: "post",
                 data: JSON.stringify(trackObj),
-                contentType: "application/json",
-                dataType: "json"
+                contentType: "application/json"
             }).done(function () {
                 console.log("done");
                 if (callback !== undefined) {
@@ -73,6 +72,11 @@ spotify.loadTrack = function (text, callback) {
 };
 spotify.getArtwork = function (callback) {
     "use strict";
+    $.ajax({
+        url: "/artwork"
+    }).done(function (data) {
+        callback(data.url);
+    });
 };
 spotify.getStatus = function (callback) {
     $.ajax({
