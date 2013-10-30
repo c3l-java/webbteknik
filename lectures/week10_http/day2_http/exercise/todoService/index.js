@@ -10,7 +10,7 @@ app.use(express.json());
 //Returns the list items array
 app.get("/items", function (req, res) {
     "use strict";
-    res.send(200, "getting list");
+    res.json(listItems.readAll());
     //Step 1 
     // Delete the res.send above
     //Use res.json() to return all items in the listItems memoryDb
