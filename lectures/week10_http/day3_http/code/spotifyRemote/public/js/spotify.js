@@ -53,9 +53,31 @@ spotify.loadTrack = function (text, callback) {
     $.ajax({
         url: "http://ws.spotify.com/search/1/track.json?q=" + text
     }).done(function (data) {
-        callback(data.tracks[0].href);
+        if (data.tracks.length > 0) {
+            var trackObj = {};
+            trackObj.track = data.tracks[0].href;
+            $.ajax({
+                url: "/loadTrack",
+                type: "post",
+                data: JSON.stringify(trackObj),
+                contentType: "application/json",
+                dataType: "json"
+            }).done(function () {
+                console.log("done");
+                if (callback !== undefined) {
+                    callback();
+                }
+            });
+        }
     });
 };
 spotify.getArtwork = function (callback) {
     "use strict";
+};
+spotify.getStatus = function (callback) {
+    $.ajax({
+        url: "/status"
+    }).done(function (data) {
+        callback(data);
+    });
 };
